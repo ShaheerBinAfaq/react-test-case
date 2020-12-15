@@ -7,11 +7,11 @@ script:
   - npm test
   - npm run build
 
-display:
+deploy:
   provider: surge
   skip_cleanup: true
-  domain: test-case.surge.sh
+  domain: imaginary-honey.surge.sh
   project: ./build/
 
-on:
+on: 
   branch: master
