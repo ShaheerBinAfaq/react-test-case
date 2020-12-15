@@ -1,0 +1,17 @@
+lagnuage: node_js
+node_js:
+  - "stable"
+
+script:
+  - npm install
+  - npm test
+  - npm run build
+
+display:
+  provider: surge
+  skip_cleanup: true
+  domain: test-case.surge.sh
+  project: ./build/
+
+on:
+  branch: master
